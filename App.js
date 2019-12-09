@@ -128,45 +128,25 @@ export default class App extends React.Component {
                 </View>
             );
         } else {
-
-            if(this.state.isLoading){
-                return (
-                    <View style={{alignItems: 'center'}}>
-                        <ActivityIndicator style={{position: 'absolute', top: 30}}/>
-                        <GameEngine
-                            style={{position: 'absolute', left: 0, top: 0}}
-                            entities={this.state.entities}
-                            systems={[this.simulatorLoop]}
+            return (
+                <View style={{alignItems: 'center'}}>
+                    {this.state.isLoading ? <ActivityIndicator style={{position: 'absolute', top: 30}}/> : null}
+                    <GameEngine
+                        style={{position: 'absolute', left: 0, top: 0}}
+                        entities={this.state.entities}
+                        systems={[this.simulatorLoop]}
+                    />
+                    <View style={{alignItems: 'center', top: height-50}}>
+                        <Button
+                            style={{position: 'absolute', top: 300}}
+                            title="Press me"
+                            onPress={() => this.changeView()}
                         />
-                        <View style={{alignItems: 'center', top: height-50}}>
-                          <Button
-                              style={{position: 'absolute', top: 300}}
-                              title="Press me"
-                              onPress={() => this.changeView()}
-                          />
-                        </View>
                     </View>
-                );
-            }else{
-                return (
-                    <View style={{alignItems: 'center'}}>
-                        <GameEngine
-                            style={{position: 'absolute', left: 0, top: 0}}
-                            entities={this.state.entities}
-                            systems={[this.simulatorLoop]}
-                        />
-                        <View style={{alignItems: 'center', top: height-50}}>
-                          <Button
-                              style={{position: 'absolute', top: 300}}
-                              title="Press me"
-                              onPress={() => this.changeView()}
-                          />
-                        </View>
-                    </View>
-                );
-            }
-
+                </View>
+            );
         }
+
     }
 
 }
