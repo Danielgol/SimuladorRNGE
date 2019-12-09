@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { View, Image } from "react-native";
 //import { array, object, string } from 'prop-types';
 
-export default class Box extends Component {
+export default class Robot extends Component {
   render() {
 
     const width = this.props.size;
@@ -12,7 +12,7 @@ export default class Box extends Component {
     const y = this.props.position[1];
 
     return (
-        <Image source={require('./image.png')}
+        <Image source={require('./robot.png')}
             style={{
                 zIndex: 1,
                 position: "absolute",
@@ -20,7 +20,6 @@ export default class Box extends Component {
                 top: y,
                 width: width,
                 height: height,
-                backgroundColor: 'black'
             }}
         />
     );
@@ -29,7 +28,7 @@ export default class Box extends Component {
 }
 
 /*
-Box.propTypes = {
+Robot.propTypes = {
     size: number,
     position: array
 }
