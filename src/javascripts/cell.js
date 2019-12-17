@@ -15,7 +15,7 @@ export default class Cell extends Component {
 
         if(show === 1){
             return (
-                <Image source={require('./oxigen.png')}
+                <Image source={require('../images/oxigen.png')}
                     style={{
                         zIndex: 0,
                         position: "absolute",
@@ -30,7 +30,7 @@ export default class Cell extends Component {
             );
         }else{
             return (
-                <Image source={require('./decibels.png')}
+                <Image source={require('../images/decibels.png')}
                     style={{
                         zIndex: 0,
                         position: "absolute",

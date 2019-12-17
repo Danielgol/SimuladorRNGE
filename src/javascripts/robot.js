@@ -12,7 +12,7 @@ export default class Robot extends Component {
     const y = this.props.position[1];
 
     return (
-        <Image source={require('./robot.png')}
+        <Image source={require('../images/robot.png')}
             style={{
                 zIndex: 1,
                 position: "absolute",

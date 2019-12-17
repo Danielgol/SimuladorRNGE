@@ -7,7 +7,7 @@ export default class Border extends Component {
   render() {
 
     return (
-      <Image source={require('./border.png')}
+      <Image source={require('../images/border.png')}
         style={{
           flex: 1,
         	height: '100%',
