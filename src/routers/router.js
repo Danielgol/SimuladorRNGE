@@ -6,7 +6,16 @@ import PoolScreen from './../screens/PoolScreen';
 
 const AppNavigator = createStackNavigator({
 	HomeScreen: {
-		screen: HomeScreen
+		screen: HomeScreen,
+		navigationOptions: {
+	      header: null
+	    }
+	},
+	PoolScreen: {
+		screen: PoolScreen,
+		navigationOptions: {
+	      header: null
+	    }
 	}
 });
 

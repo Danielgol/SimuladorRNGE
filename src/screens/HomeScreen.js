@@ -16,8 +16,7 @@ export default class HomeScreen extends React.Component {
     }
 
     start = () => {
-        //ENVIAR PRO SERVIDOR
-    	//MUDAR PRA POOLSCREEN
+        this.props.navigation.navigate('PoolScreen');
     }
 
     render(){
